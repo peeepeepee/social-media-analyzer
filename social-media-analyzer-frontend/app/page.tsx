@@ -9,7 +9,7 @@ interface AnalysisResult {
   improvement_suggestions: string[];
 }
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = "https://social-media-content-analyzer-owao.onrender.com/api";
 
 export default function Home() {
   const [isDragging, setIsDragging] = useState(false);
