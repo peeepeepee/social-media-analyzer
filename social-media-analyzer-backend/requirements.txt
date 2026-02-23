@@ -1,6 +1,10 @@
 fastapi
 uvicorn
 python-multipart
-pydantic
-pytesseract
 pdfplumber
+pytesseract
+Pillow
+python-dotenv
+langchain
+langchain-google-genai
+pydantic
