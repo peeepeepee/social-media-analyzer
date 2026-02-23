@@ -1,0 +1,38 @@
+# =========================
+# Secrets & Environment
+# =========================
+.env
+
+# =========================
+# Project Specific
+# =========================
+
+temp_uploads/
+
+
+# =========================
+# Python & Virtual Environments
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+lib/
+lib64/
+include/
+bin/
+*.egg-info/
+
+# =========================
+# OS & Editor Files
+# =========================
+.DS_Store
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+*.log
