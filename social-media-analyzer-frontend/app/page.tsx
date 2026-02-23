@@ -9,6 +9,8 @@ interface AnalysisResult {
   improvement_suggestions: string[];
 }
 
+const API_BASE = "http://localhost:8000/api";
+
 export default function Home() {
   const [isDragging, setIsDragging] = useState(false);
   const [file, setFile] = useState<File | null>(null);
@@ -86,7 +88,7 @@ export default function Home() {
       const formData = new FormData();
       formData.append('file', file);
 
-      const extractRes = await fetch('http://localhost:8000/api/extract', {
+      const extractRes = await fetch(`${API_BASE}/extract`, {
         method: 'POST',
         body: formData,
       });
@@ -102,7 +104,7 @@ export default function Home() {
 
       setStatus('analyzing');
       
-      const analyzeRes = await fetch('http://localhost:8000/api/analyze', {
+      const analyzeRes = await fetch(`${API_BASE}/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: text }),
